@@ -68,11 +68,11 @@ Three distinct sources of uncertainty are kept separate and never pooled:
 
 **Order of operations (fixed):** preprocessing/normalization is fit on train's clean, non-injected curves only; synthetic anomalies are injected afterward, into the normalized flux.
 
-**Injection prevalence:** [TO FILL IN -- ratio of injected-anomaly curves to normal curves per evaluation set] is fixed and documented separately for train, validation, and test before any test-split number is generated. This is a synthetic evaluation prevalence and is explicitly distinguished from the pipeline's natural anomaly rate.
+**Injection prevalence:** 50% injected / 50% clean confirmed-normal (1:1 ratio), applied uniformly within each evaluation set (train, validation, test) across every injection-strength bin. This ratio is fixed and documented per split before any test-split number is generated. Chosen for stable precision/recall/AUC-PR estimation across injection-strength bins -- explicitly distinguished from, and not intended to represent, the pipeline's natural anomaly rate.
 
 **Parameter ranges:** documented separately for train/val/test (transit depths 0.1-5%, flare amplitudes, injected periodic signals, signal locations, noise/background variation). The test split includes at least one held-out parameter regime or morphology combination not present in train/validation injections, to test generalization rather than interpolation.
 
-**Class-imbalance handling (training only):** [TO FILL IN -- class-weighted loss / balanced mini-batches / training-only oversampling]. Applied only within the training split; validation/test prevalence is left untouched.
+**Class-imbalance handling (training only):** Class-weighted loss, applied uniformly across the CNN fingerprint model, the ablation classifiers, and all three external baselines under R8's equal-treatment rule. Chosen over oversampling to avoid duplicating real light-curve instances (overfitting risk on a limited real-data sample), and over balanced mini-batch sampling for simpler, more transparent reproducibility. Applied only within the training split; validation/test prevalence is left untouched.
 
 **Thresholds (two, kept distinct, both frozen on validation only, before test is touched):**
 - Anomaly-detection operating-point threshold (Step 6)
