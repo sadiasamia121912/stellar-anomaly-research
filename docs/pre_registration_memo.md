@@ -108,3 +108,8 @@ This memo is treated as locked and unchanging once dated below, except by an exp
 
 **Date locked:** ______________
 **Locked by:** Samin
+
+
+## R12 specificity scheme (corrected)
+
+5-fold rotation applies uniformly to every reference-library class, regardless of exemplar count. An earlier draft applied independent held-out splits to large classes and k-fold to small ones — this was reverted because k-fold is valid at any sample size, so uniform application removes the ad hoc per-class mixing without any statistical cost.
