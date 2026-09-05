@@ -1,0 +1,104 @@
+{
+  "generated_at_utc": "2026-09-05T20:50:48.216878+00:00",
+  "n_train_rows_used": 6672,
+  "n_injected": 3336,
+  "n_clean": 3336,
+  "cv_auc_mean": 0.9520869216883178,
+  "cv_auc_std": 0.005154343910796144,
+  "feature_extraction_scale_note": "Per-curve min-max-to-[0,1], uniform 1000-point interpolation -- distinct from the VAE's global z-score normalization; see module docstring. NEEDS SIGN-OFF: log as an amendment in docs/pre_registration_memo.md before treating this ranking as final.",
+  "ranking": [
+    {
+      "feature": "HF_Power",
+      "permutation_importance_mean": 0.1636540767386091,
+      "permutation_importance_std": 0.0032312633160316542,
+      "gini_importance": 0.16276126580991515,
+      "rationale": "Fraction of spectral power in the top 7/8 of the Nyquist band -- flags short-timescale structure (flares, fast transit ingress/egress, short-period pulsators) that low-frequency features miss."
+    },
+    {
+      "feature": "RMS",
+      "permutation_importance_mean": 0.16052158273381295,
+      "permutation_importance_std": 0.002753881073826357,
+      "gini_importance": 0.0816195097873856,
+      "rationale": "Root-mean-square flux -- a scale-sensitive companion to Flux_Std, sensitive to the DC/baseline level as well as spread (useful once curves are z-scored rather than min-max normalized to [0, 1])."
+    },
+    {
+      "feature": "Symmetry",
+      "permutation_importance_mean": 0.1418165467625899,
+      "permutation_importance_std": 0.0024025737301575246,
+      "gini_importance": 0.14200846533238043,
+      "rationale": "Transits/eclipses are near-symmetric about mid-event; flares and asymmetric pulsators are not -- captures ingress/egress vs. fast-rise slow-decay morphology."
+    },
+    {
+      "feature": "Dim_Frac",
+      "permutation_importance_mean": 0.1310251798561151,
+      "permutation_importance_std": 0.002446123981831318,
+      "gini_importance": 0.12861605170643756,
+      "rationale": "Fraction of points below a low-flux threshold -- measures how much of the curve spends time in a dimmed state (transit/eclipse duration fraction, or a long-duration dimming event)."
+    },
+    {
+      "feature": "Flux_Std",
+      "permutation_importance_mean": 0.12927158273381295,
+      "permutation_importance_std": 0.0022192885034413713,
+      "gini_importance": 0.1095386723434115,
+      "rationale": "Overall flux standard deviation -- the coarsest variability amplitude measure; distinguishes photometrically quiet stars from any active/variable/anomalous ones regardless of morphology."
+    },
+    {
+      "feature": "Spec_Entropy",
+      "permutation_importance_mean": 0.10794364508393284,
+      "permutation_importance_std": 0.0027768700821303193,
+      "gini_importance": 0.0806256461850462,
+      "rationale": "Shannon entropy of the normalized power spectrum -- low for a narrowband periodic signal concentrated in one frequency, high for broadband/aperiodic or noise-dominated curves."
+    },
+    {
+      "feature": "Bright_Frac",
+      "permutation_importance_mean": 0.10143135491606714,
+      "permutation_importance_std": 0.0033403007999333674,
+      "gini_importance": 0.08608197405954127,
+      "rationale": "Fraction of points above a high-flux threshold -- the complementary measure; large for flare spikes, near-baseline curves, or the out-of-eclipse phase of an EB."
+    },
+    {
+      "feature": "Kurtosis",
+      "permutation_importance_mean": 0.05733663069544366,
+      "permutation_importance_std": 0.001757803451959332,
+      "gini_importance": 0.0844607511661913,
+      "rationale": "Fourth moment (excess kurtosis) of the flux distribution -- high for curves dominated by rare, brief, extreme excursions (an isolated flare or transit against a flat baseline) vs. smoothly-varying pulsators."
+    },
+    {
+      "feature": "Skewness",
+      "permutation_importance_mean": 0.03773980815347721,
+      "permutation_importance_std": 0.0028396642284868184,
+      "gini_importance": 0.043844513133560366,
+      "rationale": "Third moment of the flux distribution -- transits/eclipses (brief dips below a flat baseline) skew negative; flares (brief spikes above a flat baseline) skew positive."
+    },
+    {
+      "feature": "Dom_Freq",
+      "permutation_importance_mean": 0.0073591127098321055,
+      "permutation_importance_std": 0.0007626231554681312,
+      "gini_importance": 0.024018093756808804,
+      "rationale": "Dominant periodogram frequency -- the direct period estimator for periodic phenomena (pulsators, rotational variables, EBs); near-zero for single, aperiodic events (an isolated transit or flare)."
+    },
+    {
+      "feature": "Rise_Fall_Ratio",
+      "permutation_importance_mean": 0.0006220023980815004,
+      "permutation_importance_std": 0.00025644392434454413,
+      "gini_importance": 0.014855691456319119,
+      "rationale": "Ratio of pre-peak rise slope to post-peak fall slope -- the canonical flare signature (fast rise, slow exponential decay) has this far from 1; symmetric events are near 1."
+    },
+    {
+      "feature": "N_Peaks",
+      "permutation_importance_mean": 0.0005395683453237043,
+      "permutation_importance_std": 0.000380353043778464,
+      "gini_importance": 0.021131423265071607,
+      "rationale": "Counts local maxima -- separates single-event (transit/flare) curves from multi-cycle periodic variables (pulsators, rotational variables)."
+    },
+    {
+      "feature": "N_Troughs",
+      "permutation_importance_mean": 8.243405275776828e-05,
+      "permutation_importance_std": 0.00012958345672803314,
+      "gini_importance": 0.020437941997931256,
+      "rationale": "Counts local minima -- complements N_Peaks; e.g. eclipsing binaries can show two unequal-depth troughs (primary/secondary eclipse) per cycle."
+    }
+  ],
+  "m3_compliance_note": "Only train-split rows were loaded at any point in this script (val/test injection labels were never read) -- feature discovery/ranking is therefore train-split-only per M3.",
+  "frozen": false
+}

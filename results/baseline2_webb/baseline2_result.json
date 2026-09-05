@@ -1,0 +1,16 @@
+{
+  "generated_at_utc": "2026-09-05T20:57:02.300952+00:00",
+  "baseline": "External Baseline 2 -- Webb-style (tsfresh hand-crafted features + Random Forest)",
+  "feature_set": "tsfresh MinimalFCParameters",
+  "n_features": 10,
+  "selected_hyperparameters": {
+    "n_estimators": 200,
+    "max_depth": 10
+  },
+  "val_auc_pr_at_selection": 0.9192060080183913,
+  "test_auc_pr": 0.9340737641390197,
+  "n_train": 6672,
+  "n_val": 2088,
+  "n_test": 2580,
+  "note": "PRELIMINARY -- run against however much of the general pool was locally synced at run time, not necessarily the full split. Re-run once the full local mirror + real S2/S8-excluded split is confirmed complete."
+}

@@ -1,0 +1,12 @@
+{
+  "generated_at_utc": "2026-09-05T20:58:23.354834+00:00",
+  "baseline": "External Baseline 3 -- CLARA-style (URF + terminal-node similarity)",
+  "simplification_note": "Synthetic class built via per-feature independent shuffling of real training curves (standard URF trick), not CLARA's own batman-based URF4 variant -- see module docstring.",
+  "feature_vector": "3000 flux samples + 1000 Lomb-Scargle power values",
+  "n_real_train_curves": 778,
+  "urf_train_auc_sanity_check": 1.0,
+  "test_auc_pr": 0.6460532838036801,
+  "test_auc_roc": 0.6579309008419616,
+  "n_test": 1500,
+  "note": "PRELIMINARY -- reference-library cosine-similarity descriptive score (CLARA's other evaluation half) not yet added; needs processed/reference fully synced. Reflects whatever local data was available at run time."
+}

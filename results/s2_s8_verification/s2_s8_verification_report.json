@@ -1,0 +1,254 @@
+{
+  "generated_at_utc": "2026-09-05T20:33:12.814470+00:00",
+  "sectors_checked": [
+    1,
+    2,
+    3,
+    4,
+    5
+  ],
+  "S2": {
+    "label": "S2",
+    "tic_id": "261136679",
+    "simbad": {
+      "tic_id": "261136679",
+      "simbad_queried_at": "2026-09-05T20:33:26.405659+00:00",
+      "simbad_status": "FOUND",
+      "simbad_main_id": "* pi. Men",
+      "simbad_otype": "PM*",
+      "simbad_spectral_type": "G0V",
+      "simbad_all_ids": [
+        "GJ 9189",
+        "HIP 26394",
+        "Gaia DR3 4623036865373793408",
+        "PLX 1340",
+        "* pi. Men",
+        "CD-80   195",
+        "CPC 22   699",
+        "CPD-80   161",
+        "Ci 20  352",
+        "GC  7161",
+        "GCRV  3553",
+        "GEN# +1.00039091",
+        "HD  39091",
+        "HIC  26394",
+        "HR  2022",
+        "LFT  429",
+        "LHS   208",
+        "LPM 219",
+        "LTT  2359",
+        "N30 1227",
+        "NLTT 15535",
+        "CNS5 1399",
+        "PM 05411-8030",
+        "PPM 376576",
+        "SAO 258421",
+        "SKY#  9102",
+        "SPOCS  271",
+        "TD1  5445",
+        "UBV    5958",
+        "UBV M  11543",
+        "uvby98 100039091",
+        "PLX 1340.00",
+        "TYC 9386-2614-1",
+        "1RXS J053714.0-802815",
+        "Gaia DR2 4623036865373793408",
+        "2MASS J05370988-8028090",
+        "AKARI-IRC-V1 J0537107-802802",
+        "IRAS 05411-8029",
+        "WISEA J053711.33-802757.7",
+        "Gaia DR1 4623036826718164480",
+        "WEB  5206",
+        "TIC 261136679",
+        "TOI-144"
+      ],
+      "simbad_raw_columns": [
+        "main_id",
+        "ra",
+        "dec",
+        "coo_err_maj",
+        "coo_err_min",
+        "coo_err_angle",
+        "coo_wavelength",
+        "coo_bibcode",
+        "otype",
+        "ids",
+        "sp_bibcode",
+        "sp_type",
+        "sp_qual",
+        "matched_id"
+      ]
+    },
+    "known_status": {
+      "known_planet_host_aliases": [
+        "TOI-144"
+      ],
+      "appears_to_be_known_planet_host": true,
+      "interpretation": "Alias list includes ['TOI-144'] -- this star already has a confirmed/candidate planet designation independent of this project. Its VAE anomaly flag most likely corresponds to a known transiting-planet signal, not a novel phenomenon. Relevant to Step 12's discovery-vs-tool framing decision -- weighs toward 'tool paper' evidence for this specific star (correct detection AND characterization of an already-known anomaly), not a discovery claim."
+    },
+    "per_sector": {
+      "1": {
+        "sector": 1,
+        "n_products_found": 1,
+        "status": "OK",
+        "n_points": 18257,
+        "time_span_days": 27.880105402155323,
+        "flux_mean": 1464594.625,
+        "flux_std": 195.93414306640625,
+        "flux_rel_std": 0.00013378045696299523,
+        "flux_min": 1463661.625,
+        "flux_max": 1465526.125,
+        "flux_ptp_rel": 0.0012730484595522285
+      },
+      "2": {
+        "sector": 2,
+        "n_products_found": 0,
+        "status": "NOT_OBSERVED_OR_NOT_SPOC"
+      },
+      "3": {
+        "sector": 3,
+        "n_products_found": 0,
+        "status": "NOT_OBSERVED_OR_NOT_SPOC"
+      },
+      "4": {
+        "sector": 4,
+        "n_products_found": 1,
+        "status": "OK",
+        "n_points": 14196,
+        "time_span_days": 25.511996543186797,
+        "flux_mean": 1476494.625,
+        "flux_std": 341.3271179199219,
+        "flux_rel_std": 0.00023117396631278098,
+        "flux_min": 1474700.5,
+        "flux_max": 1478271.75,
+        "flux_ptp_rel": 0.0024187355302274227
+      },
+      "5": {
+        "sector": 5,
+        "n_products_found": 0,
+        "status": "NOT_OBSERVED_OR_NOT_SPOC"
+      }
+    },
+    "n_sectors_with_data": 2,
+    "preliminary_persistence_note": "2/5 sectors yielded usable data. This is a lightweight, model-free availability/variability-statistics check only -- it does NOT run the trained VAE/Model D pipeline (which does not exist yet). The formal, pipeline-based cross-sector anomaly-persistence check belongs in Notebook 7, Cell 8, once Model D is trained, and will use this same TIC ID and sector list.",
+    "r9_compliance_note": "This result has not been, and will not be, used to select any hyperparameter, threshold, or feature. R1b already guarantees TIC 261136679 is forced into the TEST split regardless of this script's outcome (see Notebook 2, Cell 3)."
+  },
+  "S8": {
+    "label": "S8",
+    "tic_id": "149603524",
+    "simbad": {
+      "tic_id": "149603524",
+      "simbad_queried_at": "2026-09-05T20:36:32.384018+00:00",
+      "simbad_status": "FOUND",
+      "simbad_main_id": "CPD-64   484",
+      "simbad_otype": "*",
+      "simbad_spectral_type": null,
+      "simbad_all_ids": [
+        "TOI-102",
+        "TIC 149603524",
+        "GALAH 171227003601291",
+        "Gaia DR3 4756649415309914240",
+        "AP J05483359-6359183",
+        "Gaia DR2 4756649415309914240",
+        "WASP-62",
+        "USNO-B1.0 0260-00058281",
+        "2MASS J05483359-6359183",
+        "CPD-64   484",
+        "GSC 08900-00874",
+        "PPM 776101",
+        "TYC 8900-874-1",
+        "RAVE J054833.6-635918",
+        "DENIS J054833.6-635918",
+        "1SWASP J054833.59-635918.3",
+        "Gaia DR1 4756649411005538304",
+        "NAME-IAU Naledi"
+      ],
+      "simbad_raw_columns": [
+        "main_id",
+        "ra",
+        "dec",
+        "coo_err_maj",
+        "coo_err_min",
+        "coo_err_angle",
+        "coo_wavelength",
+        "coo_bibcode",
+        "otype",
+        "ids",
+        "sp_bibcode",
+        "sp_type",
+        "sp_qual",
+        "matched_id"
+      ]
+    },
+    "known_status": {
+      "known_planet_host_aliases": [
+        "TOI-102",
+        "WASP-62"
+      ],
+      "appears_to_be_known_planet_host": true,
+      "interpretation": "Alias list includes ['TOI-102', 'WASP-62'] -- this star already has a confirmed/candidate planet designation independent of this project. Its VAE anomaly flag most likely corresponds to a known transiting-planet signal, not a novel phenomenon. Relevant to Step 12's discovery-vs-tool framing decision -- weighs toward 'tool paper' evidence for this specific star (correct detection AND characterization of an already-known anomaly), not a discovery claim."
+    },
+    "per_sector": {
+      "1": {
+        "sector": 1,
+        "n_products_found": 1,
+        "status": "OK",
+        "n_points": 17718,
+        "time_span_days": 27.880674144442537,
+        "flux_mean": 21131.078125,
+        "flux_std": 20.986913681030273,
+        "flux_rel_std": 0.0009931776439771056,
+        "flux_min": 21025.859375,
+        "flux_max": 21232.533203125,
+        "flux_ptp_rel": 0.009780562482774258
+      },
+      "2": {
+        "sector": 2,
+        "n_products_found": 1,
+        "status": "OK",
+        "n_points": 17692,
+        "time_span_days": 27.405677444674893,
+        "flux_mean": 21144.390625,
+        "flux_std": 21.04033660888672,
+        "flux_rel_std": 0.0009950789390131831,
+        "flux_min": 21042.25390625,
+        "flux_max": 21246.833984375,
+        "flux_ptp_rel": 0.009675382636487484
+      },
+      "3": {
+        "sector": 3,
+        "n_products_found": 1,
+        "status": "OK",
+        "n_points": 12474,
+        "time_span_days": 20.27785195040815,
+        "flux_mean": 21163.822265625,
+        "flux_std": 21.184123992919922,
+        "flux_rel_std": 0.0010009593097493052,
+        "flux_min": 21058.470703125,
+        "flux_max": 21245.7890625,
+        "flux_ptp_rel": 0.008850875310599804
+      },
+      "4": {
+        "sector": 4,
+        "n_products_found": 1,
+        "status": "OK",
+        "n_points": 14313,
+        "time_span_days": 25.402825012178482,
+        "flux_mean": 20883.51953125,
+        "flux_std": 23.51856231689453,
+        "flux_rel_std": 0.0011261780746281147,
+        "flux_min": 20766.2734375,
+        "flux_max": 20991.494140625,
+        "flux_ptp_rel": 0.010784613899886608
+      },
+      "5": {
+        "sector": 5,
+        "n_products_found": 0,
+        "status": "NOT_OBSERVED_OR_NOT_SPOC"
+      }
+    },
+    "n_sectors_with_data": 4,
+    "preliminary_persistence_note": "4/5 sectors yielded usable data. This is a lightweight, model-free availability/variability-statistics check only -- it does NOT run the trained VAE/Model D pipeline (which does not exist yet). The formal, pipeline-based cross-sector anomaly-persistence check belongs in Notebook 7, Cell 8, once Model D is trained, and will use this same TIC ID and sector list.",
+    "r9_compliance_note": "This result has not been, and will not be, used to select any hyperparameter, threshold, or feature. R1b already guarantees TIC 149603524 is forced into the TEST split regardless of this script's outcome (see Notebook 2, Cell 3)."
+  }
+}
