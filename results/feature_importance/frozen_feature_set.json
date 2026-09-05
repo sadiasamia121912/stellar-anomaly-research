@@ -1,0 +1,49 @@
+{
+  "generated_at_utc": "2026-09-05T22:30:39.854732+00:00",
+  "decision_made_by": "Claude, on the user's explicit delegation -- decision logged here in full so it can be audited/reversed if it turns out wrong",
+  "track_a_val_auc_pr_by_candidate": {
+    "all_13": 0.9296204969835001,
+    "top_9_drop_weakest_4": 0.9272928760812453,
+    "top_7_drop_weakest_6": 0.9263592283497639
+  },
+  "track_b_class_accuracy_by_candidate": {
+    "all_13": 0.8716747733141176,
+    "top_9_drop_weakest_4": 0.8705818771392542,
+    "top_7_drop_weakest_6": 0.8618086831201586
+  },
+  "track_b_permutation_importance_all_13": {
+    "Symmetry": 0.0349780701754386,
+    "N_Peaks": 0.008497807017543862,
+    "N_Troughs": 0.007127192982456149,
+    "Rise_Fall_Ratio": 0.03596491228070176,
+    "Dom_Freq": 0.025822368421052632,
+    "Spec_Entropy": 0.031030701754385954,
+    "HF_Power": 0.021271929824561397,
+    "Dim_Frac": 0.011787280701754365,
+    "Bright_Frac": 0.010032894736842097,
+    "Flux_Std": 0.020394736842105264,
+    "Skewness": 0.060307017543859656,
+    "Kurtosis": 0.04150219298245614,
+    "RMS": 0.019188596491228078
+  },
+  "frozen_feature_set_name": "all_13",
+  "frozen_features": [
+    "Symmetry",
+    "N_Peaks",
+    "N_Troughs",
+    "Rise_Fall_Ratio",
+    "Dom_Freq",
+    "Spec_Entropy",
+    "HF_Power",
+    "Dim_Frac",
+    "Bright_Frac",
+    "Flux_Std",
+    "Skewness",
+    "Kurtosis",
+    "RMS"
+  ],
+  "n_features": 13,
+  "reasoning": "Track A alone suggested dropping ['Dom_Freq', 'Rise_Fall_Ratio', 'N_Peaks', 'N_Troughs'], but Track B's class-separation importance shows ['Dom_Freq', 'Rise_Fall_Ratio'] still carry real signal for distinguishing reference classes (periodicity/shape features matter for pulsators/EBs/rotational variables even though they don't help catch these specific synthetic injections). Per M4 (Track A results are never used alone as evidence for a Track B claim -- symmetrically, they must not be used alone to justify removing a feature Track B needs), the full 13-feature set is retained.",
+  "m3_compliance_note": "Selection used TRAIN (fit) + VAL (compare candidates) only; test-split labels were never loaded by this script.",
+  "frozen": true
+}
