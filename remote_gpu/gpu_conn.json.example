@@ -1,0 +1,4 @@
+{
+  "base_url": "https://<tunnel-host>.trycloudflare.com",
+  "token": "<jupyter-token-from-vast.ai-Open-button>"
+}
